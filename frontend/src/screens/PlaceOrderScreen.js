@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CheckOutSteps from "../components/CheckOutSteps";
 import Message from "../components/Message";
 import { ORDER_CREATE_RESET } from "../constants/orderConstants";
-import { CART_CLEAR_ITEMS } from "../constants/cartConstants";
+import { clearCart } from "../actions/cartActions";
 import { createOrder } from "../actions/orderActions";
 
 const PlaceOrderScreen = ({ history }) => {
@@ -31,7 +31,7 @@ const PlaceOrderScreen = ({ history }) => {
     if (success) {
       history.push(`/order/${order._id}`);
       dispatch({ type: ORDER_CREATE_RESET });
-      dispatch({ type: CART_CLEAR_ITEMS });
+      dispatch(clearCart());
     }
     //eslint-disable-next-line
   }, [history, success, order._id]);

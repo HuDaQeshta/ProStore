@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 80vh;
+}
+
+h3 {
+  padding: 1rem 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+/* Sidebar */
+.side-bar {
+  height: 100% !important;
+  margin: 58px 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  border-right: 0.1rem solid;
+  border-radius: 0;
+  z-index: 10;
+  transition: transform 0.5s ease 0s, opacity 0.2s ease 0s;
+}
+
+/*carousel*/
+.bg-custome {
+  background: url("backgrounds/bg.png") center/cover fixed no-repeat;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item-active {
+  display: flex;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-img {
+  width: 40%;
+  padding: 3rem;
+  margin: 3rem 2rem 2rem;
+  border-radius: 50%;
+}
+
+.carousel a {
+  margin: 0 auto;
+}
+
+/* Cards */
+.fixed-size {
+  width: 270px;
+  height: 370px;
+}
+
+@media only screen and (max-width: 420px) and (min-width: 319px) {
+  .carousel-caption h2 {
+    font-size: 1rem !important;
+  }
+  .carousel-img {
+    width: 60%;
+  }
+}

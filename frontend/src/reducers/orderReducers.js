@@ -23,12 +23,13 @@ import {
   ORDER_DELIVER_RESET,
 } from "../constants/orderConstants";
 
-export const orderCreateReducer = (state = {}, action) => {
+export const orderCreateReducer = (state = { order: {} }, action) => {
   const { type, payload } = action;
   switch (type) {
     case ORDER_CREATE_REQUEST:
       return {
         loading: true,
+        order: {},
       };
     case ORDER_CREATE_SUCCESS:
       return {
@@ -42,7 +43,7 @@ export const orderCreateReducer = (state = {}, action) => {
         error: payload,
       };
     case ORDER_CREATE_RESET:
-      return {};
+      return { order: {} };
     default:
       return state;
   }
